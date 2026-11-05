@@ -7,6 +7,11 @@ android_app {
         "src/**/*.aidl",
         ":framework-appsearch-safeparcel-sources",
     ],
+    exclude_srcs: [
+        "src/app/grapheneos/gmscompat/lib/playintegrity/**/*.java",
+        "src/app/grapheneos/gmscompat/lib/sysservice/client/**/*.java",
+        "src/app/grapheneos/gmscompat/lib/sysservice/GmcCarrierConfigLoader.java",
+    ],
     resource_dirs: [
         "res",
     ],

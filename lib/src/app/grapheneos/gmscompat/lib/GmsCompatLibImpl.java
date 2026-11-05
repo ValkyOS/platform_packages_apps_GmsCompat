@@ -22,7 +22,6 @@ import java.text.ParseException;
 import java.util.Arrays;
 import java.util.function.Function;
 
-import app.grapheneos.gmscompat.lib.playintegrity.PlayIntegrityUtils;
 import app.grapheneos.gmscompat.lib.sysservice.SystemServiceOverridesRegistry;
 import app.grapheneos.gmscompat.lib.util.BinderUtils;
 
@@ -40,8 +39,7 @@ public class GmsCompatLibImpl implements IGmsCompatLib {
 
     @Override
     public ServiceConnection maybeReplaceServiceConnection(Intent service, long flags, UserHandle user, ServiceConnection orig) {
-        ServiceConnection override = PlayIntegrityUtils.maybeReplaceServiceConnection(service, orig);
-        return override;
+        return null;
     }
 
     private static final String TAG_BINDER = "GmcLibBinder";
